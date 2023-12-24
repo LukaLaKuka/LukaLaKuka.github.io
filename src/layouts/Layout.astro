@@ -83,9 +83,30 @@ const { title } = Astro.props;
 	}
 
 	.border-orange {
-		color: #f27035;
+		border-color: #f27035;
 	}
 
 	.border-yellow {
+		border-color: #f2db35;
+	}
+
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: rgb(3, 7, 18);
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: rgb(43, 47, 58);
+		border-radius: 0.3rem;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: rgb(33, 37, 48);
 	}
 </style>
