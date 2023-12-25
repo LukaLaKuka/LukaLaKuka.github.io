@@ -1,0 +1,43 @@
+---
+interface Props {
+    title: string;
+    titleClass?: string;
+    bussisnessLink?: string;
+    body: string;
+    bodyClass?: string;
+    duration: string;
+    durationClass?: string;
+}
+
+const {
+    title,
+    titleClass,
+    bussisnessLink,
+    body,
+    bodyClass,
+    duration,
+    durationClass,
+} = Astro.props;
+---
+
+<article class="flex flex-col justify-start items-start gap-2">
+    <div class="flex justify-between items-center w-full">
+        {
+            bussisnessLink ? (
+                <a class=`text-white text-3xl ${titleClass}` target="_blank" href={bussisnessLink}>
+                    {title}
+                </a>
+            ) : (
+                <h1 class=`text-white text-3xl ${titleClass}`>
+                    {title}
+                </h1>
+            )
+        }
+        <span class={durationClass ? durationClass : "text-white opacity-75 "}
+            >{duration}</span
+        >
+    </div>
+    <p class={bodyClass ? bodyClass : "text-white text-left"}>
+        {body}
+    </p>
+</article>
