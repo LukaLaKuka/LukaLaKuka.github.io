@@ -20,8 +20,8 @@ const {
 } = Astro.props;
 ---
 
-<article class="flex flex-col justify-start items-start gap-2">
-    <div class="flex justify-between items-center w-full">
+<article class="flex flex-col justify-start items-start gap-2 mx-2 md:mx-0">
+    <div class="flex flex-wrap justify-between items-center w-full">
         {
             bussisnessLink ? (
                 <a class=`text-white text-3xl ${titleClass}` target="_blank" href={bussisnessLink}>

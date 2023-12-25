@@ -1,0 +1,46 @@
+---
+import Technology from "../../../components/Technology.astro";
+import htmlSvg from "../../../assets/html.svg";
+import cssSvg from "../../../assets/css.svg";
+import bootstrapSvg from "../../../assets/bootstrap.svg";
+import debianSvg from "../../../assets/debian.svg";
+import gitSvg from "../../../assets/git.svg";
+import githubSvg from "../../../assets/github.svg";
+import javascriptSvg from "../../../assets/javascript.svg";
+import jestSvg from "../../../assets/jest.svg";
+import jsonSvg from "../../../assets/json.svg";
+import laravelSvg from "../../../assets/laravel.svg";
+import mysqlSvg from "../../../assets/mysql.svg";
+import nextSvg from "../../../assets/next.svg";
+import nodeSvg from "../../../assets/node.svg";
+import phpSvg from "../../../assets/php.svg";
+import reactSvg from "../../../assets/react.svg";
+import tailwindSvg from "../../../assets/tailwind.svg";
+import xmlSvg from "../../../assets/xml.svg";
+---
+
+<div class="flex flex-col justify-start items-start gap-2">
+    <h2 class="w-full text-2xl text-center md:text-left text-white">
+        Technical Skills
+    </h2>
+    <hr class="border-white opacity-20 w-full hidden md:block" />
+    <div class="flex flex-wrap justify-center items-center gap-2">
+        <Technology name="HTML" source={htmlSvg} />
+        <Technology name="CSS" source={cssSvg} />
+        <Technology name="JavaScript" source={javascriptSvg} />
+        <Technology name="Git" source={gitSvg} />
+        <Technology name="Github" source={githubSvg} />
+        <Technology name="PHP" source={phpSvg} />
+        <Technology name="Laravel" source={laravelSvg} />
+        <Technology name="MySQL" source={mysqlSvg} />
+        <Technology name="JSON" source={jsonSvg} />
+        <Technology name="XML" source={xmlSvg} />
+        <Technology name="Node" source={nodeSvg} />
+        <Technology name="JEST" source={jestSvg} />
+        <Technology name="React" source={reactSvg} />
+        <Technology name="NextJS" source={nextSvg} />
+        <Technology name="Bootstrap" source={bootstrapSvg} />
+        <Technology name="Tailwind CSS" source={tailwindSvg} />
+        <Technology name="Debian / Ubuntu" source={debianSvg} />
+    </div>
+</div>
