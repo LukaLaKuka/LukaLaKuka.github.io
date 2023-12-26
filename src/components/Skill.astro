@@ -7,9 +7,21 @@ interface Props {
 }
 
 const { name, source, show, sourceClass } = Astro.props;
+
+let srcClass: string | undefined;
+
+if (sourceClass === undefined) {
+    srcClass = "w-20";
+} else {
+    if (sourceClass.split(" ").includes("w-") || sourceClass.includes("w-")) {
+        srcClass = sourceClass;
+    } else {
+        srcClass = `${sourceClass} w-20`;
+    }
+}
 ---
 
 <div class="flex flex-col justify-center items-center gap-1" title={name}>
-    <img src={source.src} class=`w-20 ${sourceClass}` />
+    <img src={source.src} class=`${srcClass}` />
     {show ? <span class="text-white">{name}</span> : ""}
 </div>
