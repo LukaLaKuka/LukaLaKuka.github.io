@@ -1,13 +1,14 @@
 ---
 interface Props {
-    name: string;
+    name?: string;
     source: any;
+    show?: boolean;
 }
 
-const { name, source } = Astro.props;
+const { name, source, show } = Astro.props;
 ---
 
 <div class="flex flex-col justify-center items-center gap-1" title={name}>
-    <img src={source.src} class="w-20"/>
-    <span class="text-white">{name}</span>
+    <img src={source.src} class="w-20" />
+    {show ? <span class="text-white">{name}</span> : ""}
 </div>
