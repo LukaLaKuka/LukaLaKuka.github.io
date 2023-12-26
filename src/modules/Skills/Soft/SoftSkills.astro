@@ -1,11 +1,40 @@
 ---
-
+import Skill from "../../../components/Skill.astro";
+import adaptabilitySvg from "../../../assets/softSkills/adaptability.svg";
+import analysisSvg from "../../../assets/softSkills/analysis.svg";
+import communicationSvg from "../../../assets/softSkills/communication.svg";
+import teamWorkSvg from "../../../assets/softSkills/teamWork.svg";
+import initiativeSvg from "../../../assets/softSkills/initiative.svg";
 ---
 
 <div class="flex flex-col justify-start items-start gap-2">
-    <h2 class="w-full text-2xl text-center md:text-left text-white">
-        Blandas
-    </h2>
+    <h2 class="w-full text-2xl text-center md:text-left text-white">Blandas</h2>
     <hr class="border-white opacity-20 w-full hidden md:block" />
-    <div class="flex"></div>
+    <div class="flex flex-wrap justify-center items-center gap-2">
+        <Skill
+            show
+            name="Adaptabilidad"
+            source={adaptabilitySvg}
+            sourceClass="w-32"
+        />
+        <Skill show name="Análisis" source={analysisSvg} sourceClass="w-32" />
+        <Skill
+            show
+            name="Comunicación Efectiva"
+            source={communicationSvg}
+            sourceClass="w-32"
+        />
+        <Skill
+            show
+            name="Trabajo en equipo"
+            source={teamWorkSvg}
+            sourceClass="w-32"
+        />
+        <Skill
+            show
+            name="Iniciativa"
+            source={initiativeSvg}
+            sourceClass="w-32"
+        />
+    </div>
 </div>
