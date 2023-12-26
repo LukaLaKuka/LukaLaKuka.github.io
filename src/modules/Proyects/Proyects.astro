@@ -1,12 +1,21 @@
 ---
 import Proyect from "../../components/Proyect.astro";
 import Skill from "../../components/Skill.astro";
-import laravelSvg from "../../assets/technologies/laravel.svg";
-import livewireSvg from "../../assets/technologies/livewire.svg";
-import phpSvg from "../../assets/technologies/php.svg";
-import htmlSvg from "../../assets/technologies/html.svg";
-import cssSvg from "../../assets/technologies/css.svg";
-import bootstrapSvg from "../../assets/technologies/bootstrap.svg";
+import {
+    laravelSvg,
+    htmlSvg,
+    cssSvg,
+    bootstrapSvg,
+    phpSvg,
+    discordSvg,
+    livewireSvg,
+    reactSvg,
+    typescriptSvg,
+    nodeSvg,
+    npmSvg,
+    composerSvg,
+    jsonSvg,
+} from "../../assets";
 ---
 
 <section class="my-10 flex flex-col gap-6">
@@ -16,31 +25,63 @@ import bootstrapSvg from "../../assets/technologies/bootstrap.svg";
         class="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-start"
     >
         <Proyect
-            name="Hello"
-            description="Esta es mi descripción"
-            githubUrl="https://github.com/tomhuel/tomhuel.github.io"
-            image="/logo.png"
-        />
-        <Proyect
             name="GrooveBox"
             image="https://github.com/Tomhuel/GrooveBox/blob/main/assets/img/Groove.png?raw=true"
             description="GrooveBox es una plataforma para poder subir y descargar música de forma privada o pública y poder generar Tracklists para compartir con amigos para poder descargar tus Mixes de forma más cómoda para el mundo DJ."
             githubUrl="https://github.com/Tomhuel/GrooveBox"
-            liveUrl="https://tomhuel.github.io"
+            imagePadding
         >
-            <Skill name="HTML" source={htmlSvg} sourceClass="w-10"/>
-            <Skill name="CSS" source={cssSvg} sourceClass="w-10"/>
-            <Skill name="PHP" source={phpSvg} sourceClass="w-10"/>
-            <Skill name="Bootstrap" source={bootstrapSvg} sourceClass="w-10"/>
-            <Skill name="Laravel" source={laravelSvg} sourceClass="w-10"/>
-            <Skill name="Livewire" source={livewireSvg} sourceClass="w-10"/>
+            <Skill name="HTML" source={htmlSvg} sourceClass="w-10" />
+            <Skill name="CSS" source={cssSvg} sourceClass="w-10" />
+            <Skill name="Bootstrap" source={bootstrapSvg} sourceClass="w-10" />
+            <Skill name="PHP" source={phpSvg} sourceClass="w-10" />
+            <Skill name="Laravel" source={laravelSvg} sourceClass="w-10" />
+            <Skill name="Livewire" source={livewireSvg} sourceClass="w-10" />
+            <Skill name="NodeJS" source={nodeSvg} sourceClass="w-10" />
+            <Skill name="NPM" source={npmSvg} sourceClass="w-10" />
+            <Skill name="Composer" source={composerSvg} sourceClass="w-10" />
+            <Skill name="JSON" source={jsonSvg} sourceClass="w-10" />
         </Proyect>
-        <Proyect name="Hello" description="Esta es mi descripción" />
+
         <Proyect
-            name="Hello"
-            description="Esta es mi descripción"
-            liveUrl="https://tomhuel.github.io"
-            githubUrl="https://github.com/tomhuel/tomhuel.github.io"
-        />
+            name="Tres En Raya"
+            image={reactSvg}
+            description="Tres en Raya para aprender a utilizar React"
+            githubUrl="https://github.com/Tomhuel/Tres-En-Raya"
+            imagePadding
+        >
+            <Skill name="HTML" source={htmlSvg} sourceClass="w-10" />
+            <Skill name="CSS" source={cssSvg} sourceClass="w-10" />
+            <Skill name="ReactJS" source={reactSvg} sourceClass="w-10" />
+            <Skill name="NodeJS" source={nodeSvg} sourceClass="w-10" />
+            <Skill name="NPM" source={npmSvg} sourceClass="w-10" />
+            <Skill name="JSON" source={jsonSvg} sourceClass="w-10" />
+        </Proyect>
+        <Proyect
+            name="TaoBot"
+            image="https://camo.githubusercontent.com/a4b1cc9279fb70290a62fcf33ab7c6686fec7d4dbe6d2d5f63e748820894ab1b/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f617661746172732f313132393731323030313233333436353432352f37336133373561613034653739626536656632633361306136346362383065372e776562703f73697a653d353132"
+            description="Bot de Discord para aprender a utilizar la API de Discord"
+            githubUrl="https://github.com/Tomhuel/TaoBot"
+        >
+            <Skill name="Discord API" source={discordSvg} sourceClass="w-10" />
+            <Skill
+                name="TypeScript"
+                source={typescriptSvg}
+                sourceClass="w-10"
+            />
+            <Skill name="NodeJS" source={nodeSvg} sourceClass="w-10" />
+            <Skill name="NPM" source={npmSvg} sourceClass="w-10" />
+            <Skill name="JSON" source={jsonSvg} sourceClass="w-10" />
+        </Proyect>
+        <Proyect name="JsonHandler" description="Libreria de NPM para poder trabajar con ficheros JSON de forma más sencilla." githubUrl="https://github.com/Tomhuel/JsonHandler" liveUrl="https://www.npmjs.com/package/@tomhuel/jsonhandler" image={jsonSvg} imagePadding>
+            <Skill
+                name="TypeScript"
+                source={typescriptSvg}
+                sourceClass="w-10"
+            />
+            <Skill name="NodeJS" source={nodeSvg} sourceClass="w-10" />
+            <Skill name="NPM" source={npmSvg} sourceClass="w-10" />
+            <Skill name="JSON" source={jsonSvg} sourceClass="w-10" />
+        </Proyect>
     </div>
 </section>

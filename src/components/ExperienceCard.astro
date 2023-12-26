@@ -3,8 +3,6 @@ interface Props {
     title: string;
     titleClass?: string;
     bussisnessLink?: string;
-    body: string;
-    bodyClass?: string;
     duration: string;
     durationClass?: string;
 }
@@ -13,8 +11,6 @@ const {
     title,
     titleClass,
     bussisnessLink,
-    body,
-    bodyClass,
     duration,
     durationClass,
 } = Astro.props;
@@ -37,7 +33,5 @@ const {
             >{duration}</span
         >
     </div>
-    <p class={bodyClass ? bodyClass : "text-white text-left"}>
-        {body}
-    </p>
+    <slot></slot>
 </article>
