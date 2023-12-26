@@ -1,0 +1,46 @@
+---
+import Proyect from "../../components/Proyect.astro";
+import Skill from "../../components/Skill.astro";
+import laravelSvg from "../../assets/technologies/laravel.svg";
+import livewireSvg from "../../assets/technologies/livewire.svg";
+import phpSvg from "../../assets/technologies/php.svg";
+import htmlSvg from "../../assets/technologies/html.svg";
+import cssSvg from "../../assets/technologies/css.svg";
+import bootstrapSvg from "../../assets/technologies/bootstrap.svg";
+---
+
+<section class="my-10 flex flex-col gap-6">
+    <h1 class="text-center text-white text-4xl">Proyectos</h1>
+    <hr class="border-white opacity-25" />
+    <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-start"
+    >
+        <Proyect
+            name="Hello"
+            description="Esta es mi descripción"
+            githubUrl="https://github.com/tomhuel/tomhuel.github.io"
+            image="/logo.png"
+        />
+        <Proyect
+            name="GrooveBox"
+            image="https://github.com/Tomhuel/GrooveBox/blob/main/assets/img/Groove.png?raw=true"
+            description="GrooveBox es una plataforma para poder subir y descargar música de forma privada o pública y poder generar Tracklists para compartir con amigos para poder descargar tus Mixes de forma más cómoda para el mundo DJ."
+            githubUrl="https://github.com/Tomhuel/GrooveBox"
+            liveUrl="https://tomhuel.github.io"
+        >
+            <Skill name="HTML" source={htmlSvg} sourceClass="w-10"/>
+            <Skill name="CSS" source={cssSvg} sourceClass="w-10"/>
+            <Skill name="PHP" source={phpSvg} sourceClass="w-10"/>
+            <Skill name="Bootstrap" source={bootstrapSvg} sourceClass="w-10"/>
+            <Skill name="Laravel" source={laravelSvg} sourceClass="w-10"/>
+            <Skill name="Livewire" source={livewireSvg} sourceClass="w-10"/>
+        </Proyect>
+        <Proyect name="Hello" description="Esta es mi descripción" />
+        <Proyect
+            name="Hello"
+            description="Esta es mi descripción"
+            liveUrl="https://tomhuel.github.io"
+            githubUrl="https://github.com/tomhuel/tomhuel.github.io"
+        />
+    </div>
+</section>

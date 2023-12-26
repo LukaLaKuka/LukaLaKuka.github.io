@@ -1,0 +1,66 @@
+---
+import linkSvg from "../assets/link.svg";
+import githubSvg from "../assets/technologies/github.svg";
+import Link from "./Link.astro";
+
+interface Props {
+    name: string;
+    description?: string;
+    githubUrl?: string;
+    liveUrl?: string;
+    image?: any;
+}
+
+const { name, description, githubUrl, liveUrl, image } = Astro.props;
+---
+
+<div
+    class="flex flex-col border border-white border-opacity-25 rounded-lg w-full"
+>
+    {image ? <img class="rounded-t-lg" src={image} alt="image" /> : ""}
+    <div class="p-4 pb-0">
+        <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+            {name}
+        </h5>
+        <p class="mb-3 text-gray-400 overflow-auto max-h-18">
+            {description}
+        </p>
+    </div>
+    <div
+        class=`flex flex-wrap justify-center items-center px-4 gap-3 ${Astro.slots.has('default') ? "mb-3" : ""}`
+    >
+        <slot />
+    </div>
+    <div
+        class="flex flex-wrap items-center my-3 mt-0 justify-center gap-3 md:gap-5 md:px-0 px-5"
+    >
+        {
+            githubUrl ? (
+                <Link href={githubUrl} target="_blank" class="bg-slate-900">
+                    <img src={githubSvg.src} alt="Github Logo" class="w-6" />
+                    <span class="text-white">Github</span>
+                </Link>
+            ) : (
+                ""
+            )
+        }
+        {
+            liveUrl ? (
+                <Link href={liveUrl} target="_blank" class="bg-slate-200">
+                    <img src={linkSvg.src} alt="Github Logo" class="w-6" />
+                    <span class="">Live</span>
+                </Link>
+            ) : (
+                ""
+            )
+        }
+    </div>
+</div>
+
+<style>
+    .max-h-18 {
+        max-height: 4.5rem;
+    }
+</style>
