@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Experience from "../modules/Experience/Experience.astro";
 import Skills from "../modules/Skills/Skills.astro";
 import Proyects from "../modules/Proyects/Proyects.astro";
+import Contact from "../modules/Contact/Contact.svelte";
 ---
 
 <Layout title="Tomhuel">
@@ -14,4 +15,6 @@ import Proyects from "../modules/Proyects/Proyects.astro";
 	<Skills />
 	<hr class="border-white opacity-25 border-2" />
 	<Proyects />
+	<hr class="border-white opacity-25 border-2" />
+	<Contact client:load/>
 </Layout>
