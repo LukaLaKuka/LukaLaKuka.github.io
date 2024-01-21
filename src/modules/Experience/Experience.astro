@@ -1,5 +1,18 @@
 ---
 import ExperienceCard from "../../components/ExperienceCard.astro";
+
+const calculateYears = (date: string) => {
+    var today = new Date();
+    var startDate = new Date(date);
+    var years = today.getFullYear() - startDate.getFullYear();
+    var m = today.getMonth() - startDate.getMonth();
+
+    if (m < 0 || (m === 0 && today.getDate() < startDate.getDate())) {
+        years--;
+    }
+
+    return years;
+};
 ---
 
 <section class="flex flex-col my-10 gap-5">
@@ -27,10 +40,13 @@ import ExperienceCard from "../../components/ExperienceCard.astro";
     <div>
         <ExperienceCard
             title="Coordinador de Equipos y Monitor | Cerebritos"
-            duration="+6 años"
+            duration={`+${calculateYears("2017/10/21")} años`}
         >
             <p class="text-left text-white opacity-90">
-                Colaborando con la asociación de inteligencias múltiples Cerebritos desde los 14 años. He hecho de monitor en múltiples actividades con niños y jóvenes relacionados con las inteligencias y tecnologías cómo la robótica.
+                Colaborando con la asociación de inteligencias múltiples
+                Cerebritos desde los 14 años. He hecho de monitor en múltiples
+                actividades con niños y jóvenes relacionados con las
+                inteligencias y tecnologías cómo la robótica.
             </p>
             <ol>
                 <li class="text-white text-left opacity-90">
@@ -38,11 +54,13 @@ import ExperienceCard from "../../components/ExperienceCard.astro";
                     a las inteligencias múltiples y a las nuevas tecnologías.
                 </li>
                 <li class="text-white text-left opacity-90">
-                    - Coordinador de equipo y monitor en el Foro Gamer de los
-                    Realejos.
+                    - Coordinador de equipos.
                 </li>
                 <li class="text-white text-left opacity-90">
                     - Monitor en la Tenerife GG.
+                </li>
+                <li class="text-white text-left opacity-90">
+                    - Monitor en el Foro Gamer de los Realejos.
                 </li>
             </ol>
         </ExperienceCard>
