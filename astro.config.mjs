@@ -11,8 +11,6 @@ export default defineConfig({
   integrations: [
     svelte(),
     tailwind(),
-    mdx(),
-    sitemap(),
     partytown({
       config: {
         forward: ["dataLayer.push"],
