@@ -18,6 +18,7 @@ import nodeSvg from "./technologies/node.svg"
 import npmSvg from "./technologies/npm.svg"
 import phpSvg from "./technologies/php.svg"
 import reactSvg from "./technologies/react.svg"
+import jwtSvg from "./technologies/jwt.svg"
 import tailwindSvg from "./technologies/tailwind.svg"
 import typescriptSvg from "./technologies/typescript.svg"
 import xmlSvg from "./technologies/xml.svg"
@@ -26,6 +27,8 @@ import analysisSvg from "./softSkills/analysis.svg"
 import communicationSvg from "./softSkills/communication.svg"
 import initiativeSvg from "./softSkills/initiative.svg"
 import teamWorkSvg from "./softSkills/teamWork.svg"
+import Cerebritos from "./proyectsIcons/Cerebritos.png";
+import closeSvg from "./others/close.svg";
 
 export {
     discordSvg,
@@ -55,5 +58,8 @@ export {
     adaptabilitySvg, 
     analysisSvg, 
     communicationSvg, 
-    initiativeSvg
+    initiativeSvg,
+    Cerebritos,
+    jwtSvg,
+    closeSvg,
 }
