@@ -1,8 +1,16 @@
 <script lang="ts">
+    import { onMount } from "svelte";
+
     let email = "tomasnahuelantela@gmail.com";
     let buttonStatus = false;
+    let showTooltip = false;
+
     function copyToClipboard() {
         navigator.clipboard.writeText(email);
+        showTooltip = true;
+        setTimeout(() => {
+            showTooltip = false;
+        }, 2000);
     }
 </script>
 
@@ -57,6 +65,11 @@
             </a>
         </div>
     </div>
+    <div class="flex justify-around">
+        {#if showTooltip}
+            <div class="tooltip">Copiado!</div>
+        {/if}
+    </div>
 </section>
 
 <style>
@@ -87,5 +100,23 @@
         color: black;
         padding: 0.5rem;
         background-color: white;
+    }
+
+    .tooltip {
+        position: absolute;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        animation: fadeOut 2s forwards;
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
     }
 </style>

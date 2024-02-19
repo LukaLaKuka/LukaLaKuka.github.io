@@ -28,6 +28,7 @@ import communicationSvg from "./softSkills/communication.svg"
 import initiativeSvg from "./softSkills/initiative.svg"
 import teamWorkSvg from "./softSkills/teamWork.svg"
 import Cerebritos from "./proyectsIcons/Cerebritos.png";
+import GroovePng from "./proyectsIcons/Groove.png";
 import closeSvg from "./others/close.svg";
 
 export {
@@ -62,4 +63,5 @@ export {
     Cerebritos,
     jwtSvg,
     closeSvg,
+    GroovePng,
 }

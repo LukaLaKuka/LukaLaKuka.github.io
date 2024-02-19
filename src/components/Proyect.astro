@@ -26,13 +26,13 @@ const { name, description, githubUrl, liveUrl, image, imagePadding } =
     image={image}
 >
     <div
-        class=`flex flex-col border border-white border-opacity-25 rounded-lg w-full ${imagePadding ? "p-4" : ""}`
+        class=`flex flex-col border border-white border-opacity-25 rounded-lg w-full h-min-full`
     >
         {
             image ? (
                 <img
                     src={image.src === undefined ? image : image.src}
-                    class={`rounded-t-lg w-full ${!imagePadding ? "border-b-gray-900 border-b" : ""}`}
+                    class={`rounded-t-lg w-full aspect-square object-cover ${!imagePadding ? "border-b-gray-900 border-b" : "p-4"}`}
                     alt="image"
                 />
             ) : (

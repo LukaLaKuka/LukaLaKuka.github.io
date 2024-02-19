@@ -1,7 +1,6 @@
 ---
 import Proyect from "../../components/Proyect.astro";
 import Skill from "../../components/Skill.astro";
-import ModalButton from "../../components/UI/Modal/ModalButton.svelte";
 import {
     laravelSvg,
     htmlSvg,
@@ -18,6 +17,7 @@ import {
     jsonSvg,
     Cerebritos,
     jwtSvg,
+    GroovePng
 } from "../../assets";
 import { nextSvg } from "../../assets";
 import { mysqlSvg } from "../../assets";
@@ -52,7 +52,7 @@ import { mysqlSvg } from "../../assets";
 
         <Proyect
             name="GrooveBox"
-            image="https://github.com/Tomhuel/GrooveBox/blob/main/assets/img/Groove.png?raw=true"
+            image={GroovePng}
             description="GrooveBox es una plataforma para poder subir y descargar música de forma privada o pública y poder generar Tracklists para compartir con amigos para poder descargar tus Mixes de forma más cómoda para el mundo DJ."
             githubUrl="https://github.com/Tomhuel/GrooveBox"
             imagePadding
