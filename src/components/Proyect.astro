@@ -47,7 +47,7 @@ const { name, description, githubUrl, liveUrl, image, imagePadding } =
             </h3>
         </div>
         <div
-            class=`flex flex-wrap justify-center items-center px-4 gap-3 ${Astro.slots.has('default') ? "mb-3" : ""}`
+            class=`flex flex-wrap justify-center items-center px-4 gap-3 ${Astro.slots.has('default') ? "mb-3" : "d-none"}`
         >
             <slot />
         </div>
@@ -80,7 +80,7 @@ const { name, description, githubUrl, liveUrl, image, imagePadding } =
             }
         </div>
     </div>
-    <slot slot="techs"></slot>
+    <slot slot="techs" />
 </ModalButton>
 
 <style>
