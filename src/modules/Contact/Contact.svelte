@@ -24,10 +24,10 @@
             id="email"
             class="p-2 rounded-lg bg-slate-200 w-full md:w-1/2"
         />
-        <div class="flex w-full md:w-auto justify-center items-center gap-5">
+        <div class="flex w-full md:w-auto justify-center items-center gap-5 ">
             <button
                 on:click={copyToClipboard}
-                class="button"
+                class="button bg-gray-950 bg-opacity-70"
                 title="Copiar al Portapapeles"
             >
                 <svg
@@ -47,7 +47,7 @@
             <a
                 href={`mailto:${email}`}
                 target="_blank"
-                class="button"
+                class="button bg-gray-950 bg-opacity-70"
                 title="Enviar Correo"
             >
                 <svg

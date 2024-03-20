@@ -33,7 +33,7 @@
         class="modal fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 z-50"
     >
         <div
-            class="modal-content md:p-5 p-1 bg-gray-950 border border-color-third-3 rounded-lg max-w-lg max-h-full overflow-auto"
+            class="modal-content md:p-5 p-1 bg-gray-950 border border-color-third-3 rounded-lg max-w-lg max-h-full overflow-auto bg-opacity-95"
         >
             <div class="row-span-1 flex justify-end items-center p-2">
                 <button
