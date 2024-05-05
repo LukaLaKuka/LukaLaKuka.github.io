@@ -15,7 +15,7 @@
 
     function funnyHello() {
         window.location.href =
-            "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1&mute=1";
+            "https://www.youtube.com/watch?v=q9Bv0B-wJ5s?autoplay=1&mute=1";
     }
 </script>
 
