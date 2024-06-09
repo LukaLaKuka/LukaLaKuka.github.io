@@ -1,23 +1,52 @@
 ---
 import ExperienceCard from "../../components/ExperienceCard.astro";
 
-const calculateYears = (date: string) => {
-    var today = new Date();
-    var startDate = new Date(date);
-    var years = today.getFullYear() - startDate.getFullYear();
-    var m = today.getMonth() - startDate.getMonth();
-
-    if (m < 0 || (m === 0 && today.getDate() < startDate.getDate())) {
+const calculateDate = (date: string) => {
+    let today = new Date();
+    let startDate = new Date(date);
+    let years = today.getFullYear() - startDate.getFullYear();
+    let months = today.getMonth() - startDate.getMonth();
+    if (months < 0 || (months === 0 && today.getDate() < startDate.getDate())) {
         years--;
+        if (months !== 0) {
+            months = 11 - startDate.getMonth() + today.getMonth();
+        }
     }
 
-    return years;
+    let output = '';
+    let month_output = months === 1 ? 'mes' : 'meses';
+
+    if (years > 0 && months > 0) {
+        output += `${years} años y ${months} ${month_output}`;
+    } else if(years > 0) {
+        output += `${years} años`;
+    } else {
+        output += `${months} ${month_output}`;
+    }
+
+    return output;
 };
 ---
 
 <section class="flex flex-col my-10 gap-5">
     <h1 class="text-white text-4xl text-center md:text-left">Experiencia</h1>
     <hr class="border-color-third-2 opacity-25 text-center" />
+    <div>
+        <ExperienceCard
+            title="Desarrollador Web | Healthy Fun Tech SL"
+            bussisnessLink="https://healthyfun.app/"
+            duration={calculateDate("2024/05/02")}
+        >
+            <p class="text-white opacity-90 text-left">
+                Actualmente me encuentro trabajando junto al proyecto de Healthy Fun.
+            </p>
+            <p class="text-white opacity-90 text-left">
+                Estamos desarrollando un producto con objetivo de fomentar la reducción de obesidad, mejora de hábitos saludables, reciclaje y muchas cosas más con nuestros juegos interactivos y educativos.
+                Las tecnologías utilizadas en este trabajo son: Wordpress, PHP, Bootstrap 5, Webpack, JavaScript y diversas librerías.
+            </p>
+        </ExperienceCard>
+        <hr class="border-color-third-1 opacity-10 mt-4 text-center" />
+    </div>
     <div>
         <ExperienceCard
             title="FullStack | eAgora - Algoritmo del Cambio"
@@ -40,7 +69,7 @@ const calculateYears = (date: string) => {
     <div>
         <ExperienceCard
             title="Coordinador de Equipos y Monitor | Cerebritos"
-            duration={`+${calculateYears("2017/10/21")} años`}
+            duration={`${calculateDate("2017/10/21")}`}
         >
             <p class="text-left text-white opacity-90">
                 Colaborando con la asociación de inteligencias múltiples
